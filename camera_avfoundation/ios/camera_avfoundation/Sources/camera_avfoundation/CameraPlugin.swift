@@ -72,13 +72,13 @@ public final class CameraPlugin: NSObject, FlutterPlugin {
     FLTDispatchQueueSetSpecific(captureSessionQueue, FLTCaptureSessionQueueSpecific)
 
     UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-    NotificationCenter.default.addObserver(
-      forName: UIDevice.orientationDidChangeNotification,
-      object: UIDevice.current,
-      queue: .main
-    ) { [weak self] notification in
-      self?.orientationChanged(notification)
-    }
+    // NotificationCenter.default.addObserver(
+    //   forName: UIDevice.orientationDidChangeNotification,
+    //   object: UIDevice.current,
+    //   queue: .main
+    // ) { [weak self] notification in
+    //   self?.orientationChanged(notification)
+    // }
   }
 
   public func detachFromEngine(for registrar: FlutterPluginRegistrar) {
@@ -103,7 +103,7 @@ public final class CameraPlugin: NSObject, FlutterPlugin {
 
     self.captureSessionQueue.async { [weak self] in
       guard let strongSelf = self else { return }
-      // `FLTCam.setDeviceOrientation` must be called on capture session queue.
+      // // `FLTCam.setDeviceOrientation` must be called on capture session queue.
       // strongSelf.camera?.setDeviceOrientation(orientation)
       // // `CameraPlugin.sendDeviceOrientation` can be called on any queue.
       // strongSelf.sendDeviceOrientation(orientation)
