@@ -104,9 +104,9 @@ public final class CameraPlugin: NSObject, FlutterPlugin {
     self.captureSessionQueue.async { [weak self] in
       guard let strongSelf = self else { return }
       // `FLTCam.setDeviceOrientation` must be called on capture session queue.
-      strongSelf.camera?.setDeviceOrientation(orientation)
-      // `CameraPlugin.sendDeviceOrientation` can be called on any queue.
-      strongSelf.sendDeviceOrientation(orientation)
+      // strongSelf.camera?.setDeviceOrientation(orientation)
+      // // `CameraPlugin.sendDeviceOrientation` can be called on any queue.
+      // strongSelf.sendDeviceOrientation(orientation)
     }
   }
 

@@ -452,21 +452,22 @@ static void selectBestFormatForRequestedFrameRate(
 
 - (AVCaptureVideoOrientation)getVideoOrientationForDeviceOrientation:
     (UIDeviceOrientation)deviceOrientation {
-  if (deviceOrientation == UIDeviceOrientationPortrait) {
-    return AVCaptureVideoOrientationPortrait;
-  } else if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
-    // Note: device orientation is flipped compared to video orientation. When UIDeviceOrientation
-    // is landscape left the video orientation should be landscape right.
-    return AVCaptureVideoOrientationLandscapeRight;
-  } else if (deviceOrientation == UIDeviceOrientationLandscapeRight) {
-    // Note: device orientation is flipped compared to video orientation. When UIDeviceOrientation
-    // is landscape right the video orientation should be landscape left.
-    return AVCaptureVideoOrientationLandscapeLeft;
-  } else if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
-    return AVCaptureVideoOrientationPortraitUpsideDown;
-  } else {
-    return AVCaptureVideoOrientationPortrait;
-  }
+      return AVCaptureVideoOrientationPortrait;
+  // if (deviceOrientation == UIDeviceOrientationPortrait) {
+  //   return AVCaptureVideoOrientationPortrait;
+  // } else if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
+  //   // Note: device orientation is flipped compared to video orientation. When UIDeviceOrientation
+  //   // is landscape left the video orientation should be landscape right.
+  //   return AVCaptureVideoOrientationLandscapeRight;
+  // } else if (deviceOrientation == UIDeviceOrientationLandscapeRight) {
+  //   // Note: device orientation is flipped compared to video orientation. When UIDeviceOrientation
+  //   // is landscape right the video orientation should be landscape left.
+  //   return AVCaptureVideoOrientationLandscapeLeft;
+  // } else if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown) {
+  //   return AVCaptureVideoOrientationPortraitUpsideDown;
+  // } else {
+  //   return AVCaptureVideoOrientationPortrait;
+  // }
 }
 
 - (NSString *)getTemporaryFilePathWithExtension:(NSString *)extension
