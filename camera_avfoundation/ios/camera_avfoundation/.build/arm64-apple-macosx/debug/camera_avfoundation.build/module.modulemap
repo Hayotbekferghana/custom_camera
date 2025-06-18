@@ -1,0 +1,4 @@
+module camera_avfoundation {
+    header "/Users/hayotbek/Rizo/new/rizo_driver_mobile/packages/camera/camera_avfoundation/ios/camera_avfoundation/.build/arm64-apple-macosx/debug/camera_avfoundation.build/camera_avfoundation-Swift.h"
+    requires objc
+}

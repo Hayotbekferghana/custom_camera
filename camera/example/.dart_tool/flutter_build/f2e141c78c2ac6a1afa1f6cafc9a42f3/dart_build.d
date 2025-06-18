@@ -1,0 +1,1 @@
+ /Users/hayotbek/Rizo/new/rizo_driver_mobile/packages/camera/camera/example/.dart_tool/flutter_build/f2e141c78c2ac6a1afa1f6cafc9a42f3/dart_build_result.json: 

@@ -6,6 +6,8 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
+import 'camera_example_page/custom_camera_page.dart';
+
 late List<CameraDescription> _cameras;
 
 Future<void> main() async {
@@ -61,8 +63,8 @@ class _CameraAppState extends State<CameraApp> {
     if (!controller.value.isInitialized) {
       return Container();
     }
-    return MaterialApp(
-      home: CameraPreview(controller),
+    return const MaterialApp(
+      home: CustomCameraPage(),
     );
   }
 }

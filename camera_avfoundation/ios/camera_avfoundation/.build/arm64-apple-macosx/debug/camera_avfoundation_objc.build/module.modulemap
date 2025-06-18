@@ -1,0 +1,4 @@
+module camera_avfoundation_objc {
+    umbrella "/Users/hayotbek/Rizo/new/rizo_driver_mobile/packages/camera/camera_avfoundation/ios/camera_avfoundation/Sources/camera_avfoundation_objc/include"
+    export *
+}
